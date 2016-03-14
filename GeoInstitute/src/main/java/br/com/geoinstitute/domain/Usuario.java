@@ -93,6 +93,5 @@ public class Usuario extends Dominio {
 			return false;
 		return true;
 	}
-
 	
 }
