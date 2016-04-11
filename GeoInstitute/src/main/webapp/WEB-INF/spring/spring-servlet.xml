@@ -11,15 +11,23 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/views/" />
 		<property name="suffix" value=".jsp" />
+		
+		<!-- ViewResolver:
+		antes:  http://localhost:8080/MeuProjeto/views/index.jsp
+		depois: http://localhost:8080/MeuProjeto/index
+		 -->
+		
 	</bean>
 
 	<mvc:annotation-driven />
-
 	<context:annotation-config />
+	<!-- configuração para usar anotations -->
 	
 	<context:component-scan base-package="br.com.geoinstitute.controller" />
+	<!-- Caminho da package que contém todos os controllers -->
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- pastas que contém todos os assets: css, imgs, js -->
 	
 	<bean class="br.com.geoinstitute.dao.UsuarioDao" />
 

@@ -24,5 +24,6 @@
   <servlet-mapping>
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
+    <!-- localhost:8085/MeuProjeto/* -->
   </servlet-mapping>
 </web-app>

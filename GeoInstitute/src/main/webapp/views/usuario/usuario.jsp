@@ -10,13 +10,12 @@
 <html >
 	<head>
 		<title>Cadastro de Usuário</title>
-		
-		<script src="<spring:url value="/resources/js/jquery-2.1.4.js" />"></script>
+				<script src="<spring:url value="/resources/js/jquery-2.1.4.js" />"></script>
 		<link href="<spring:url value='/resources/css/bootstrap.css' />" rel="stylesheet" type="text/css" />
 		
 	</head>
 	<body>
-		<form:form method="POST" id="usuario_form" modelAttribute="usuario" >
+		<form:form method="POST" commandName="usuario" id="usuario_form" modelAttribute="usuario" >
 			<div class="page-header">
 			   <h1>Cadastro de Usuário 
 			      <small>GeoInstitute</small>
@@ -44,7 +43,7 @@
 			
 			<div class="form-group">
 				<form:button type="submit" class="btn btn-primary">Cadastrar</form:button>
-				<button type="button" onclick="listar()" class="btn btn-warning">Listar</button>
+				<--<button type="button" onclick="listar()" class="btn btn-warning">Listar</button>
 			</div>
 			 	
 		</form:form>
