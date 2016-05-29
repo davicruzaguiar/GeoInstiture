@@ -21,7 +21,7 @@
 			      <small>GeoInstitute</small>
 			   </h1>
 			</div>
-			<p>Página de cadastro do usuário. Necessário para acesso a todos as funcionalidades
+			<p>Página de cadastro do usuário. Necessário para o acesso a todos as funcionalidades
 			do sistema.</p>
 			
 			<br>
@@ -43,12 +43,13 @@
 			
 			<div class="form-group">
 				<form:button type="submit" class="btn btn-primary">Cadastrar</form:button>
-				<--<button type="button" onclick="listar()" class="btn btn-warning">Listar</button>
+				<form:button type="button" onclick="listar()" class="btn btn-warning">Listar</form:button>
 			</div>
 			 	
 		</form:form>
 		
 		<script type="text/javascript">
+			
 			function listar() {
 				$.ajax({
 					url: '/GeoInstitute/usuario/listar'

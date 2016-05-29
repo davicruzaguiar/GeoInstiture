@@ -17,9 +17,13 @@
 		
 		<!-- JS -->
 		
-		<script src="<c:url value="/resources/js/jquery-2.1.4.js" />"></script>
-		<script src="<c:url value="/resources/js/ol.js" />"></script>
-		<script src="<c:url value="/resources/js/main.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/jquery-2.1.4.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/mapa.js" />"></script>
+		<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.5&sensor=false"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        
+        <!--<script type="text/javascript" src="<c:url value="/resources/js/OpenLayers.js" />"></script>-->
 		<!-- <script src='http://ol3js.org/en/master/build/ol.js'></script> -->
 	
 		<style>
@@ -51,17 +55,16 @@
 		</style>
 		
 	</head>
-	<body onload='init()'>
+	<body>
 		<div class="container">
 			<div class="jumbotron">
-				<h2>Mapa de Testes</h2>
+				<h2>Mapa do Bloco A - IFPE</h2>
 				<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
 			</div>				
 		</div>
 		
-		<div id='map'></div>
-		<button class='draw-point' onclick='startDraw("Point")' style='position: absolute; top:300px;'>Draw Points</button>
-        <button class='draw-line' onclick='startDraw("LineString")' style='position: absolute; top:350px;'>Draw Lines</button>
-        <button class='draw-polygon' onclick='startDraw("Polygon")' style='position: absolute; top:400px;'>Draw Polygon</button>
+		<div id="map" style="height: 400px; width: 600px;"></div>    
+        <div id="coordinates"></div>
+		
 	</body>
 </html>
