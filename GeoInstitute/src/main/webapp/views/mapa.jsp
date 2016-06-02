@@ -30,6 +30,8 @@
 			#map{
         		height:98%;
         		width:100%;
+        		float: left; width: 30%;
+        		
         	}
         	
         	body{
@@ -63,7 +65,7 @@
 			</div>				
 		</div>
 		
-		<div id="map" style="height: 400px; width: 600px;"></div>    
+		<div id="map" style="height: 400px; width: 800px;"></div>    
         <div id="coordinates"></div>
 		
 	</body>
