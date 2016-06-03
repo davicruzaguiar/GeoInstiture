@@ -28,14 +28,19 @@
 	
 		<style>
 			#map{
-        		height:98%;
-        		width:100%;
-        		float: left; width: 30%;
-        		
+				height: 400px; 
+				width: 600px;
+				padding-left: 50px;
         	}
         	
         	body{
-        		height:100%;
+        		height:150%;
+        	}
+
+        	footer{ 
+        		display:block;
+        		padding-top:50%;
+        		bottom: 0;
         	}
         	
         	html{
@@ -55,18 +60,85 @@
         		
         	}
 		</style>
-		
 	</head>
-	<body>
+	<body class="container">
+	
+	<div style="display: table;">
+	
+		<header>
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">GeoIFPE</a>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="#">Home</a></li>
+			      </ul>
+			      <form class="navbar-form navbar-left" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default">Submit</button>
+			      </form>
+			      
+			      <!--<ul class="nav navbar-nav navbar-right">
+			        <li><a href="#">Link</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			          </ul>
+			        </li>
+			      </ul>-->
+			      
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</header>
+	
 		<div class="container">
-			<div class="jumbotron">
+			<div class="jumbotron" id="jumbo">
 				<h2>Mapa do Bloco A - IFPE</h2>
 				<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
 			</div>				
 		</div>
 		
-		<div id="map" style="height: 400px; width: 800px;"></div>    
+		<div id="map"></div>    
         <div id="coordinates"></div>
+        
+		<footer>
+			<nav class="navbar navbar-inverse"><!-- default ou inverse -->
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">GeoIFPE</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <p class="navbar-text">Todos os direitos reservados</p>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</footer>
 		
+		</div>
 	</body>
 </html>

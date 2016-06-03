@@ -43,18 +43,16 @@ function loadMap() {
 	selectControl.activate();
 
 	// Initial Location
-	var mapextent = new OpenLayers.Bounds(-34.9508094787598, -8.0592212677002, -34.9495811462402, -8.05866527557373).transform(
-			WGS84, map.getProjectionObject());
+	var mapextent = new OpenLayers.Bounds(-34.95080, -8.05882, -34.94965, -8.05911).transform(WGS84, map.getProjectionObject());
 	map.zoomToExtent(mapextent);
 	
-	document.getElementById("map").style.marginLeft = "350px";
 }
 
 function addLayers() {
 	// Google Layer
 	gmapsHybrid = new OpenLayers.Layer.Google("Google Hybrid", {
 		type : google.maps.MapTypeId.HYBRID,
-		numZoomLevels : 20
+		numZoomLevels : 25
 	});
 	
 	var gmapsSattelite = new OpenLayers.Layer.Google("Google Satélite", {
