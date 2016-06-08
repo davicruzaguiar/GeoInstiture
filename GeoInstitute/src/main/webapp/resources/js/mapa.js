@@ -87,6 +87,19 @@ function addLayers() {
 				visibility : true
 			});
 
+	primeiro_ok = new OpenLayers.Layer.WMS("Primeiro Andar",
+			"http://localhost:8086/geoserver/geo/wms", {
+				'layers' : 'geo:primeiro_ok',
+				transparent : true,
+				format : 'image/png'
+			}, {
+				displayInLayerSwitcher : true,
+				isBaseLayer : false,
+				opacity : 0.5,
+				strokeWidth : 111,
+				visibility : true
+			});
+	
 	// Markers
 	markers = new OpenLayers.Layer.Vector('Marcadores', {
 		displayInLayerSwitcher : true,
@@ -95,7 +108,7 @@ function addLayers() {
 
 	addMarker(-34.95035, -8.05884, ""+imgAdminTag2+"" + "<p>Diretoria de Administração (DAD)</p>");
 
-	map.addLayers([ terreo_ok, markers, gmapsSattelite, gmapsHybrid, gmapsTerrain, gmapsRoad ]);
+	map.addLayers([ terreo_ok, primeiro_ok, markers, gmapsSattelite, gmapsHybrid, gmapsTerrain, gmapsRoad ]);
 }
 
 function addMarker(longitude, latitude, description) {
